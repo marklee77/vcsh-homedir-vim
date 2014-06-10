@@ -1,8 +1,11 @@
 *
+!.aspell.en.prepl
+!.aspell.en.pws
 !.config
 !.config/mr
 !.config/mr/config.d
 !.config/mr/config.d/vim
+!.emacs
 !.gitignore.d
 !.gitignore.d/vim
 !.vim
