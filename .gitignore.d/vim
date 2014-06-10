@@ -7,4 +7,6 @@
 !.gitignore.d/vim
 !.vim
 !.vim/*
+!.vim/ftplugin
+!.vim/ftplugin/*
 !.vimrc
