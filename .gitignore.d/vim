@@ -1,0 +1,10 @@
+*
+!.config
+!.config/mr
+!.config/mr/config.d
+!.config/mr/config.d/vim
+!.gitignore.d
+!.gitignore.d/vim
+!.vim
+!.vim/*
+!.vimrc
