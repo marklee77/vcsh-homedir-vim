@@ -25,39 +25,52 @@ push = /bin/true
 
 [.vim/bundle/nerdcommenter]
 checkout = git clone https://github.com/scrooloose/nerdcommenter.git nerdcommenter
+push = /bin/true
 
 [.vim/bundle/supertab]
 checkout = git clone https://github.com/ervandew/supertab.git supertab
+push = /bin/true
 
 [.vim/bundle/todo.txt-vim]
 checkout = git clone https://github.com/freitass/todo.txt-vim.git todo.txt-vim
+push = /bin/true
 
 [.vim/bundle/vim-colors-solarized]
 checkout = git clone https://github.com/altercation/vim-colors-solarized.git vim-colors-solarized
+push = /bin/true
 
 [.vim/bundle/vim-dispatch]
 checkout = git clone https://github.com/tpope/vim-dispatch.git vim-dispatch
+push = /bin/true
 
 [.vim/bundle/vim-fugitive]
 checkout = git clone https://github.com/tpope/vim-fugitive.git vim-fugitive
+push = /bin/true
 
 [.vim/bundle/vim-ipython]
 checkout = git clone https://github.com/ivanov/vim-ipython.git vim-ipython
+push = /bin/true
 
 [.vim/bundle/vim-orgmode]
 checkout = git clone https://github.com/jceb/vim-orgmode.git vim-orgmode
+push = /bin/true
 
 [.vim/bundle/vim-pandoc]
 checkout = git clone https://github.com/vim-pandoc/vim-pandoc.git vim-pandoc
+push = /bin/true
 
 [.vim/bundle/vim-unimpaired]
 checkout = git clone https://github.com/tpope/vim-unimpaired.git vim-unimpaired
+push = /bin/true
 
 [.vim/bundle/webapi-vim]
 checkout = git clone https://github.com/mattn/webapi-vim.git webapi-vim
+push = /bin/true
 
 [.vim/bundle/vim-eunuch]
 checkout = git clone https://github.com/tpope/vim-eunuch.git
+push = /bin/true
 
 [.vim/bundle/tmux.vim]
 checkout = git clone https://github.com/Keithbsmiley/tmux.vim.git tmux.vim
+push = /bin/true
