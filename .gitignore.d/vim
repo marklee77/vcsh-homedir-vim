@@ -9,6 +9,7 @@
 !.gitignore.d
 !.gitignore.d/vim
 !.vim
+.vim/.netrwhist
 !.vim/*
 !.vim/ftplugin
 !.vim/ftplugin/*
