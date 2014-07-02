@@ -12,6 +12,14 @@
     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
     ("\\paragraph{%s}" . "\\paragraph*{%s}")
     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(add-to-list 'org-export-latex-classes '(
+    "ieeetran"
+    "\\documentclass[10pt,journal,twoside,cspaper,compsoc]{IEEEtran}\n \[NO-DEFAULT-PACKAGES]\n \[EXTRA]\n  \\usepackage{graphicx}\n  \\usepackage{hyperref}"  
+    ("\\section{%s}" . "\\section*{%s}") 
+    ("\\subsection{%s}" . "\\subsection*{%s}")
+    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")      
+    ("\\paragraph{%s}" . "\\paragraph*{%s}") 
+    ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 (setq org-alphabetical-lists t)
 (setq org-src-fontify-natively t)
 ;(add-hook 'org-babel-after-execute-hook 'org-display-inline-images) 
