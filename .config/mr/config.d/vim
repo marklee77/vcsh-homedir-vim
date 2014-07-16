@@ -10,6 +10,10 @@ push     = git push git@github.com:marklee77/mailtools.vim.git
 checkout = git clone https://github.com/tpope/vim-pathogen.git vim-pathogen
 skip     = test "$1" = push
 
+[.vim/bundle/vim-speeddating]
+checkout = git clone https://github.com/tpope/vim-speeddating.git vim-speeddating
+skip     = test "$1" = push
+
 [.vim/bundle/gist-vim]
 checkout = git clone https://github.com/mattn/gist-vim.git gist-vim
 skip     = test "$1" = push
