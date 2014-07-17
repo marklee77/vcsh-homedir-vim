@@ -42,6 +42,10 @@ skip     = test "$1" = push
 checkout = git clone https://github.com/tpope/vim-fugitive.git vim-fugitive
 skip     = test "$1" = push
 
+[.vim/bundle/vim-gnupg]
+checkout = git clone https://github.com/jamessan/vim-gnupg.git vim-gnupg
+skip     = test "$1" = push
+
 [.vim/bundle/vim-ipython]
 checkout = git clone https://github.com/ivanov/vim-ipython.git vim-ipython
 skip     = test "$1" = push
