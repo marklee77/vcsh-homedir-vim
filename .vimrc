@@ -13,6 +13,11 @@ python del powerline_setup
 let g:org_export_init_script="~/.emacs"
 let g:org_export_verbose=0
 
+" gnupg
+let g:GPGPreferArmor=1
+let g:GPGPreferSign=1
+let g:GPGDefaultRecipients=['9A0DF8BB9A556F97CF2C61BB614CC78883ACB9EA']
+
 " use vim settings instead of vi settings
 set nocompatible
 
