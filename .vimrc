@@ -16,7 +16,7 @@ let g:org_export_verbose=0
 " gnupg
 let g:GPGPreferArmor=1
 let g:GPGPreferSign=1
-let g:GPGDefaultRecipients=['9A0DF8BB9A556F97CF2C61BB614CC78883ACB9EA']
+let g:GPGDefaultRecipients=['24333385B681EA0B125E7BFCCB8FE39384C1D3F4']
 
 " use vim settings instead of vi settings
 set nocompatible
@@ -93,8 +93,6 @@ syntax on
 " highlight chars over textwidth
 if &textwidth > 0 | exec 'match Todo /\%>' . &textwidth . 'v.\+/' | endif
 
-" plugin defaults
-let b:SuperTabDisabled=1
 
 " check for autocmd
 if has("autocmd")
@@ -113,11 +111,11 @@ if has("autocmd")
   augroup todo
     autocmd!
     autocmd BufNewFile,BufRead todo.txt set filetype=todo
-  augroup haskell
-    autocmd!
-    autocmd BufEnter *.hs compiler ghc
-    autocmd BufEnter *.hs let g:haddock_browser = "/usr/bin/firefox"
-    autocmd BufEnter *.hs let g:ghc = "/usr/bin/ghc"
+  "augroup haskell
+  "  autocmd!
+  "  autocmd BufEnter *.hs compiler ghc
+  "  autocmd BufEnter *.hs let g:haddock_browser = "/usr/bin/firefox"
+  "  autocmd BufEnter *.hs let g:ghc = "/usr/bin/ghc"
   augroup END
 
   if ! has('gui_running')
