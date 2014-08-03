@@ -35,7 +35,7 @@ checkout = git clone https://github.com/freitass/todo.txt-vim.git todo.txt-vim
 skip     = test "$1" = push
 
 [${HOME}/.vim/bundle/vim-colors-solarized]
-checkout = git clone https://github.com/altercation/vim-colors-solarized.git vim-colors-solarized
+checkout = git clone https://github.com/altercation/vim-colors-solarized.git
 skip     = test "$1" = push
 
 [${HOME}/.vim/bundle/vim-dispatch]
@@ -60,6 +60,10 @@ skip     = test "$1" = push
 
 [${HOME}/.vim/bundle/vim-pandoc]
 checkout = git clone https://github.com/vim-pandoc/vim-pandoc.git vim-pandoc
+skip     = test "$1" = push
+
+[${HOME}/.vim/bundle/vim-pandoc-syntax]
+checkout = git clone https://github.com/vim-pandoc/vim-pandoc-syntax.git
 skip     = test "$1" = push
 
 [${HOME}/.vim/bundle/vim-unimpaired]
