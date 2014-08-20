@@ -18,6 +18,9 @@ let g:GPGPreferArmor=1
 let g:GPGPreferSign=1
 let g:GPGDefaultRecipients=['24333385B681EA0B125E7BFCCB8FE39384C1D3F4']
 
+" query command complete
+let g:qcc_query_command="/bin/true"
+
 " use vim settings instead of vi settings
 set nocompatible
 
