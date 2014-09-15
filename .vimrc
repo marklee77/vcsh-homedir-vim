@@ -4,10 +4,10 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " powerline
-let g:Powerline_symbols='fancy'
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" let g:Powerline_symbols='fancy'
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 
 " org-mode
 let g:org_export_init_script="~/.emacs"
