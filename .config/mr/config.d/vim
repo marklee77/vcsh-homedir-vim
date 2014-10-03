@@ -1,12 +1,14 @@
 [${HOME}/.vim/bundle/querycommandcomplete.vim]
-checkout = git clone https://gitlab.stillwell.me/mark/querycommandcomplete.vim.git querycommandcomplete.vim
-           git remote set-url --add --push origin git@stillwell.me:mark/querycommandcomplete.vim.git
+checkout = git clone https://gitlab.stillwell.me/mark/querycommandcomplete-vim.git querycommandcomplete.vim
+           cd ${HOME}/.vim/bundle/querycommandcomplete.vim
+           git remote set-url --add --push origin git@stillwell.me:mark/querycommandcomplete-vim.git
            git remote set-url --add --push origin git@github.com:marklee77/querycommandcomplete.vim.git
            git remote set-url --add --push origin git@bitbucket.org:marklee77/querycommandcomplete.vim.git
 
 [${HOME}/.vim/bundle/mailtools.vim]
-checkout = git clone https://github.com/marklee77/mailtools.vim.git mailtools.vim
-           git remote set-url --add --push origin git@stillwell.me:mark/mailtools.vim.git
+checkout = git clone https://gitlab.stillwell.me/mark/mailtools-vim.git mailtools.vim
+           cd ${HOME}/.vim/bundle/mailtools.vim
+           git remote set-url --add --push origin git@stillwell.me:mark/mailtools-vim.git
            git remote set-url --add --push origin git@github.com:marklee77/mailtools.vim.git
            git remote set-url --add --push origin git@bitbucket.org:marklee77/mailtools.vim.git
 
