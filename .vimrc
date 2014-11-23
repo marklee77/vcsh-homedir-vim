@@ -22,8 +22,26 @@ let g:GPGPreferArmor=1
 let g:GPGPreferSign=1
 let g:GPGDefaultRecipients=['24333385B681EA0B125E7BFCCB8FE39384C1D3F4']
 
-" signfify
+" vim-signfify
 let g:signify_vcs_list = [ 'git', 'svn', 'bzr' ]
+let g:signify_cursorhold_insert = 1
+let g:signify_cursorhold_normal = 1
+let g:signify_update_on_bufenter = 0
+let g:signify_update_on_focusgained = 1
+"nnoremap <leader>gt SignifyToggle
+"nnoremap <leader>gh SignifyToggleHighlight
+"nnoremap <leader>gr SignifyRefresh
+"nnoremap <leader>gd SignifyDebug
+
+" hunk jumping
+"nmap <leader>gj <plug>(signify-next-hunk)
+"nmap <leader>gk <plug>(signify-prev-hunk)
+
+" hunk text object
+"omap ic <plug>(signify-motion-inner-pending)
+"xmap ic <plug>(signify-motion-inner-visual)
+"omap ac <plug>(signify-motion-outer-pending)
+"xmap ac <plug>(signify-motion-outer-visual)
 
 " query command complete
 let g:qcc_query_command="/bin/true"
