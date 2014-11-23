@@ -22,6 +22,9 @@ let g:GPGPreferArmor=1
 let g:GPGPreferSign=1
 let g:GPGDefaultRecipients=['24333385B681EA0B125E7BFCCB8FE39384C1D3F4']
 
+" signfify
+let g:signify_vcs_list = [ 'git', 'svn', 'bzr' ]
+
 " query command complete
 let g:qcc_query_command="/bin/true"
 

@@ -76,6 +76,10 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 checkout = git clone https://github.com/tpope/vim-pathogen.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
+[${HOME}/.vim/bundle/vim-signify]
+checkout = git clone https://github.com/mhinz/vim-signify.git
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
 [${HOME}/.vim/bundle/vim-speeddating]
 checkout = git clone https://github.com/tpope/vim-speeddating.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
