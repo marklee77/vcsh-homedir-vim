@@ -24,6 +24,10 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 checkout = git clone https://github.com/ervandew/supertab.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
+[${HOME}/.vim/bundle/syntastic]
+checkout = git clone https://github.com/scrooloose/syntastic.git
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
 [${HOME}/.vim/bundle/tmux.vim]
 checkout = git clone https://github.com/Keithbsmiley/tmux.vim.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
