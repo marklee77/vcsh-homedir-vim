@@ -9,6 +9,8 @@ call pathogen#helptags()
 " python powerline_setup()
 " python del powerline_setup
 
+let g:airline_powerline_fonts = 1
+
 " org-mode
 let g:org_export_init_script="~/.emacs"
 let g:org_export_verbose=0
