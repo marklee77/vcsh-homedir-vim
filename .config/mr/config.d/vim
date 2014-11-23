@@ -12,14 +12,6 @@ checkout = git clone https://gitlab.stillwell.me/mark/mailtools-vim.git mailtool
            git remote set-url --add --push origin git@github.com:marklee77/mailtools.vim.git
            git remote set-url --add --push origin git@bitbucket.org:marklee77/mailtools.vim.git
 
-[${HOME}/.vim/bundle/vim-pathogen]
-checkout = git clone https://github.com/tpope/vim-pathogen.git 
-skip     = [ "$1" = push ] || [ "$1" = autopush ]
-
-[${HOME}/.vim/bundle/vim-speeddating]
-checkout = git clone https://github.com/tpope/vim-speeddating.git 
-skip     = [ "$1" = push ] || [ "$1" = autopush ]
-
 [${HOME}/.vim/bundle/gist-vim]
 checkout = git clone https://github.com/mattn/gist-vim.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
@@ -32,8 +24,16 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 checkout = git clone https://github.com/ervandew/supertab.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
+[${HOME}/.vim/bundle/tmux.vim]
+checkout = git clone https://github.com/Keithbsmiley/tmux.vim.git
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
 [${HOME}/.vim/bundle/todo.txt-vim]
 checkout = git clone https://github.com/freitass/todo.txt-vim.git 
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
+[${HOME}/.vim/bundle/vim-airline]
+checkout = git clone https://github.com/bling/vim-airline.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-colors-solarized]
@@ -42,6 +42,10 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-dispatch]
 checkout = git clone https://github.com/tpope/vim-dispatch.git 
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
+[${HOME}/.vim/bundle/vim-eunuch]
+checkout = git clone https://github.com/tpope/vim-eunuch.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-fugitive]
@@ -68,6 +72,14 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 checkout = git clone https://github.com/vim-pandoc/vim-pandoc-syntax.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
+[${HOME}/.vim/bundle/vim-pathogen]
+checkout = git clone https://github.com/tpope/vim-pathogen.git 
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
+[${HOME}/.vim/bundle/vim-speeddating]
+checkout = git clone https://github.com/tpope/vim-speeddating.git 
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
 [${HOME}/.vim/bundle/vim-unimpaired]
 checkout = git clone https://github.com/tpope/vim-unimpaired.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
@@ -76,10 +88,3 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 checkout = git clone https://github.com/mattn/webapi-vim.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
-[${HOME}/.vim/bundle/vim-eunuch]
-checkout = git clone https://github.com/tpope/vim-eunuch.git
-skip     = [ "$1" = push ] || [ "$1" = autopush ]
-
-[${HOME}/.vim/bundle/tmux.vim]
-checkout = git clone https://github.com/Keithbsmiley/tmux.vim.git
-skip     = [ "$1" = push ] || [ "$1" = autopush ]
