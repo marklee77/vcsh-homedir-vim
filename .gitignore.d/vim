@@ -6,7 +6,6 @@
 !.config/mr/config.d
 !.config/mr/config.d/vim
 !.emacs
-!.gist-vim
 !.gitignore.d
 !.gitignore.d/vim
 !.vim
