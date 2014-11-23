@@ -6,6 +6,12 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " ************************************************************
+" * gist-vim                                                 *
+" ************************************************************
+let g:gist_clip_command = 'xclip -sel clipboard'
+let g:gist_open_browser_after_post = 1
+
+" ************************************************************
 " * gundo.vim                                                *
 " ************************************************************
 let g:gundo_right = 1
