@@ -16,6 +16,10 @@ checkout = git clone https://gitlab.stillwell.me/mark/mailtools-vim.git mailtool
 checkout = git clone https://github.com/mattn/gist-vim.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
+[${HOME}/.vim/bundle/gundo.vim]
+checkout = git clone https://github.com/sjl/gundo.vim.git
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
 [${HOME}/.vim/bundle/nerdcommenter]
 checkout = git clone https://github.com/scrooloose/nerdcommenter.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]

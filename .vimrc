@@ -1,28 +1,39 @@
-" pathogen plugin manager
+" ************************************************************
+" * pathogen plugin manager                                  *
+" ************************************************************
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-" powerline
-" let g:Powerline_symbols='fancy'
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
+" ************************************************************
+" * gundo.vim                                                *
+" ************************************************************
+let g:gundo_right = 1
+nnoremap <F5> :GundoToggle<CR>
 
+" ************************************************************
+" vim-airline
+" ************************************************************
 let g:airline_powerline_fonts = 1
 let g:airline_theme="solarized"
 let g:airline#extensions#tabline#enabled = 1
 
-" org-mode
-let g:org_export_init_script="~/.emacs"
-let g:org_export_verbose=0
-
-" gnupg
+" ************************************************************
+" vim-gnupg
+" ************************************************************
 let g:GPGPreferArmor=1
 let g:GPGPreferSign=1
 let g:GPGDefaultRecipients=['24333385B681EA0B125E7BFCCB8FE39384C1D3F4']
 
+" ************************************************************
+" vim-orgmode
+" ************************************************************
+let g:org_export_init_script="~/.emacs"
+let g:org_export_verbose=0
+
+" ************************************************************
 " vim-signfify
+" ************************************************************
 let g:signify_vcs_list = [ 'git', 'svn', 'bzr' ]
 let g:signify_cursorhold_insert = 1
 let g:signify_cursorhold_normal = 1
@@ -33,20 +44,23 @@ nnoremap <leader>gt :SignifyToggle<CR>
 nnoremap <leader>gh :SignifyToggleHighlight<CR>
 nnoremap <leader>gr :SignifyRefresh<CR>
 nnoremap <leader>gd :SignifyDebug<CR>
-
 " hunk jumping
 "nmap <leader>gj <plug>(signify-next-hunk)
 "nmap <leader>gk <plug>(signify-prev-hunk)
-
 " hunk text object
 "omap ic <plug>(signify-motion-inner-pending)
 "xmap ic <plug>(signify-motion-inner-visual)
 "omap ac <plug>(signify-motion-outer-pending)
 "xmap ac <plug>(signify-motion-outer-visual)
 
+" ************************************************************
 " query command complete
+" ************************************************************
 let g:qcc_query_command="/bin/true"
 
+" ************************************************************
+" * standard vim settings and overrides                      *
+" ************************************************************
 " use vim settings instead of vi settings
 set nocompatible
 
