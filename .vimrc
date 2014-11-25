@@ -125,7 +125,7 @@ set grepprg=grep\ -nH\ $*
 set equalprg=par\ -w80
 set spell spelllang=en_us
 
-" colors
+" colors FIXME: solarized plugin config...
 set background=dark
 let g:solarized_termtrans=1
 let g:solarized_underline=0
