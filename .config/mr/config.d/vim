@@ -80,6 +80,10 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 checkout = git clone https://github.com/vim-pandoc/vim-pandoc.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
+[${HOME}/.vim/bundle/vim-pandoc-after]
+checkout = git clone https://github.com/vim-pandoc/vim-pandoc-after.git
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
 [${HOME}/.vim/bundle/vim-pandoc-syntax]
 checkout = git clone https://github.com/vim-pandoc/vim-pandoc-syntax.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
