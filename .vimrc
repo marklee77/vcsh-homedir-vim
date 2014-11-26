@@ -48,9 +48,9 @@ let g:org_export_verbose=0
 let g:signify_vcs_list = [ 'git', 'svn', 'bzr' ]
 let g:signify_cursorhold_insert = 1
 let g:signify_cursorhold_normal = 1
-let g:signify_update_on_bufenter = 0
+let g:signify_update_on_bufenter = 1
 let g:signify_update_on_focusgained = 1
-let g:signify_disable_by_default = 1
+let g:signify_disable_by_default = 0
 nnoremap <leader>gt :SignifyToggle<CR>
 nnoremap <leader>gh :SignifyToggleHighlight<CR>
 nnoremap <leader>gr :SignifyRefresh<CR>
