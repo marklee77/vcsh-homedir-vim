@@ -68,6 +68,23 @@ nnoremap <leader>gd :SignifyDebug<CR>
 "xmap ac <plug>(signify-motion-outer-visual)
 
 " ************************************************************
+" * vim-solarized                                            *
+" ************************************************************
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_underline=0
+colorscheme solarized
+
+" override some solarized highlight colors
+autocmd ColorScheme * highlight clear SpellBad
+autocmd ColorScheme * highlight SpellBad ctermfg=red
+autocmd ColorScheme * highlight clear SpellCap
+autocmd ColorScheme * highlight SpellCap ctermfg=yellow
+autocmd ColorScheme * highlight clear SpellRare
+autocmd ColorScheme * highlight clear SpellLocal
+autocmd ColorScheme * highlight SpellLocal ctermfg=green
+
+" ************************************************************
 " * standard vim settings and overrides                      *
 " ************************************************************
 
@@ -88,6 +105,7 @@ set nowrap
 set scrolloff=4
 set laststatus=2
 set ambiwidth=single
+set showbreak=↪
 
 " default indent
 set noautoindent
@@ -120,32 +138,19 @@ set visualbell
 set noerrorbells
 set flash
 
+" disable ex mode
+nnoremap Q <nop>
+
 " helpers
 set grepprg=grep\ -nH\ $*
 set equalprg=par\ -w80
 set spell spelllang=en_us
-
-" colors FIXME: solarized plugin config...
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_underline=0
-colorscheme solarized
-
-" override some solarized highlight colors
-autocmd ColorScheme * highlight clear SpellBad
-autocmd ColorScheme * highlight SpellBad ctermfg=red
-autocmd ColorScheme * highlight clear SpellCap
-autocmd ColorScheme * highlight SpellCap ctermfg=yellow
-autocmd ColorScheme * highlight clear SpellRare
-autocmd ColorScheme * highlight clear SpellLocal
-autocmd ColorScheme * highlight SpellLocal ctermfg=green
 
 filetype plugin on
 syntax on
 
 " highlight chars over textwidth
 if &textwidth > 0 | exec 'match Todo /\%>' . &textwidth . 'v.\+/' | endif
-
 
 " check for autocmd
 if has("autocmd")
@@ -164,11 +169,6 @@ if has("autocmd")
   augroup todo
     autocmd!
     autocmd BufNewFile,BufRead todo.txt set filetype=todo
-  "augroup haskell
-  "  autocmd!
-  "  autocmd BufEnter *.hs compiler ghc
-  "  autocmd BufEnter *.hs let g:haddock_browser = "/usr/bin/firefox"
-  "  autocmd BufEnter *.hs let g:ghc = "/usr/bin/ghc"
   augroup END
 
   if ! has('gui_running')
