@@ -20,7 +20,7 @@ nnoremap <F5> :GundoToggle<CR>
 " ************************************************************
 " * query command complete                                   *
 " ************************************************************
-let g:qcc_query_command="/bin/true"
+"let g:qcc_query_command="lbdbq"
 
 " ************************************************************
 " * supertab                                                 *
