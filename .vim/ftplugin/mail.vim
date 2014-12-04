@@ -5,6 +5,8 @@ onoremap <silent> Q V/^.*\n\(\s*>\)\@!<CR>
 nnoremap <silent> S /^.*\n--\s*\_$<CR>
 onoremap <silent> S V/^.*\n.*\n--\s*\_$<CR>
 
+set fo+=aw
+
 set spell spelllang=en_us textwidth=78
 
 set omnifunc=QueryCommandComplete
