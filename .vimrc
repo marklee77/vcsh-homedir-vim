@@ -186,4 +186,3 @@ if has("autocmd")
   endif
 
 endif " has("autocmd")
-
