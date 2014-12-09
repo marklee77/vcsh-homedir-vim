@@ -14,6 +14,6 @@ set omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 " keymaps
-nnoremap <leader>1 :%s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me>/<CR>/^--\s*<CR><CR>dG<CR>:r ~/.signature<CR>
+nnoremap <leader>1 :%s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^--\s*/<CR>d$<CR>:r ~/.signature<CR>
 nnoremap <leader>2 :%s/^From:\zs.*/ Mark Stillwell <marklee@fortawesome.org>/<CR>
 nnoremap <leader>3 :%s/^From:\zs.*/ Mark Stillwell <m.stillwell@imperial.ac.uk>/<CR>
