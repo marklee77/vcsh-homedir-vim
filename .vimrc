@@ -186,3 +186,7 @@ if has("autocmd")
   endif
 
 endif " has("autocmd")
+
+" edit vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
