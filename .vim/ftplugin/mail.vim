@@ -19,7 +19,7 @@ let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 " save preformatted text from format=flowed
 if has("autocmd")
     augroup email
-    autocmd VimLeave .* %s/^ \{4}.\{-}\zs\s*$//
+    autocmd BufWritePre,FileWritePre .* %s/^ \{4}.\{-}\zs\s*$//
 endif " has("autocmd")
 
 " keymaps
