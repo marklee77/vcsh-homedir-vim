@@ -16,6 +16,12 @@ setlocal textwidth=78
 setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
+" save preformatted text from format=flowed
+if has("autocmd")
+    augroup email
+    autocmd VimLeave .* s/^\zs {4}
+endif " has("autocmd")
+
 " keymaps
 nnoremap <buffer> <silent> <localleader>1 <Esc>:%s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^--\s*/+1<CR>dG:r ~/.signature<CR>
 nnoremap <buffer> <silent> <localleader>2 <Esc>:%s/^From:\zs.*/ Mark Stillwell <marklee@fortawesome.org><CR>:/^--\s*/+1<CR>dG:r ~/.signature<CR>
