@@ -18,7 +18,7 @@ let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 if has("autocmd")
     " save preformatted text from format=flowed
-    autocmd BufWritePre,FileWritePre * /^\s*$,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//
+    autocmd BufWritePre,FileWritePre * 1/^\s*$/,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//
 endif " has("autocmd")
 
 " keymaps
