@@ -16,10 +16,9 @@ setlocal textwidth=78
 setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
-" save preformatted text from format=flowed
 if has("autocmd")
-    augroup email
-    autocmd BufWritePre,FileWritePre .* %s/^ \{4}.\{-}\zs\s*$//
+    " save preformatted text from format=flowed
+    autocmd BufWritePre,FileWritePre * /^\s*$,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//
 endif " has("autocmd")
 
 " keymaps
