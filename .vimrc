@@ -101,7 +101,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 " appearance
-" set nofoldenable
+set nofoldenable
 set nonumber
 set noruler
 set showcmd
