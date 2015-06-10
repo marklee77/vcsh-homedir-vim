@@ -17,7 +17,10 @@ setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 " autocmd BufWritePre,FileWritePre * 1/^\s*$/,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//e
-autocmd BufWritePre,FileWritePre * /^\s*$/,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//e
+autocmd BufWritePre,FileWritePre * 
+    \ let w:winview = winsaveview() | 
+    \ 1 | /^\s*$/,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//e | 
+    \ if exists('w:winview') | call winrestview(w:winview) | endif
 
 " keymaps
 nnoremap <buffer> <silent> <localleader>1 <Esc>:%s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^--\s*/+1<CR>dG:r ~/.signature<CR>
