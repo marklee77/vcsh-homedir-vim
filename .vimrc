@@ -193,3 +193,4 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " clipboard
 set clipboard=unnamedplus
 
+
