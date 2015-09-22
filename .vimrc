@@ -37,6 +37,8 @@ let g:airline#extensions#tabline#enabled = 1
 " ************************************************************
 " * vim-gnupg                                                *
 " ************************************************************
+let g:GPGDebugLevel=200
+let g:GPGDebugLog="gnupg.log"
 let g:GPGPreferArmor=1
 let g:GPGPreferSign=1
 let g:GPGDefaultRecipients=['24333385B681EA0B125E7BFCCB8FE39384C1D3F4']
