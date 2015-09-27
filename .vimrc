@@ -159,7 +159,7 @@ filetype plugin on
 syntax on
 
 " highlight chars over textwidth
-if &textwidth > 0 | exec 'match Todo /\%>' . &textwidth . 'v.\+/' | endif
+"if &textwidth > 0 | exec 'match Todo /\%>' . &textwidth . 'v.\+/' | endif
 
 " check for autocmd
 if has("autocmd")
