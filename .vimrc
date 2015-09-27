@@ -60,6 +60,10 @@ nnoremap <leader>gt :SignifyToggle<CR>
 nnoremap <leader>gh :SignifyToggleHighlight<CR>
 nnoremap <leader>gr :SignifyRefresh<CR>
 nnoremap <leader>gd :SignifyDebug<CR>
+" ************************************************************
+" * netrw                                                    *
+" ************************************************************
+let g:netrw_silent=1
 
 " hunk jumping
 "nmap <leader>gj <plug>(signify-next-hunk)
