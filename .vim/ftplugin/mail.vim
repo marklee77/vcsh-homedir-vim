@@ -14,7 +14,7 @@ setlocal spell spelllang=en_us
 setlocal textwidth=78
 
 setlocal omnifunc=QueryCommandComplete
-let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
+et g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 " autocmd BufWritePre,FileWritePre * 1/^\s*$/,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//e
 "autocmd BufWritePre,FileWritePre * 
