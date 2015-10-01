@@ -16,12 +16,17 @@ setlocal textwidth=72
 setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
-" FIXME: in theory lines should end in no space whenever the quote depth
-" changes...
-autocmd BufWritePre,FileWritePre *
-    \ %s/\s*$//e |
-    \ %s/^--$/-- /e |
-    \ 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /e |
+function! FixFlowed()
+    let pos = getpos('.')
+    %s/\s*$//e
+    %s/^--$/-- /e
+    1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /e
+    1/^\s*$/;/^--\s*$/s/^From\ze\_s/ From/e
+    call setpos('.', pos)
+endfunction
+
+" FIXME: lines should end in no space whenever the quote depth changes...
+autocmd BufWritePre <buffer> call FixFlowed()
 
 " keymaps
 nnoremap <buffer> <silent> <localleader>1 <Esc>:%s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^--\s*/+1<CR>dG:r ~/.signature<CR>
