@@ -18,10 +18,10 @@ let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 function! FixFlowed()
     let pos = getpos('.')
-    %s/\s*$//e
-    %s/^--$/-- /e
-    1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /e
-    1/^\s*$/;/^--\s*$/s/^From\ze\_s/ From/e
+    silent! %s/\s*$//
+    silent! %s/^--$/-- /
+    silent! 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /
+    silent! 1/^\s*$/;/^--\s*$/s/^From\ze\_s/ From/e
     call setpos('.', pos)
 endfunction
 
