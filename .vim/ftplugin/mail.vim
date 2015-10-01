@@ -11,7 +11,7 @@ nnoremap <buffer> <silent> S /^.*\n--\s*\_$<CR>
 onoremap <buffer> <silent> S V/^.*\n.*\n--\s*\_$<CR>
 
 setlocal spell spelllang=en_us 
-setlocal textwidth=78
+setlocal textwidth=72
 
 setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
