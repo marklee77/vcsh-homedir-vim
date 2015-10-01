@@ -26,10 +26,14 @@ function! FixFlowed()
     silent! %s/\s*$//
     " put a space back after sig delimiter
     silent! %s/^--$/-- /
-    " put spaces back in paragraphs
+    " put spaces back at ends of lines in paragraphs
     silent! 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /
+    " strip space at eol if quote depth increases
+    silent! %s/^\(>\+\).*\zs\s\+\ze\_s\1>//
+    " strip space at eol if quote depth decreases
+    silent! %s/^\(>\+\).*\zs\s\+\ze\_s\(\1\)\@!//
     " space stuff from
-    silent! 1/^\s*$/;/^--\s*$/s/^From\ze\_s/ From/e
+    silent! 1/^\s*$/;/^--\s*$/s/^From\ze\_s/ From/
     call setpos('.', pos)
 endfunction
 
