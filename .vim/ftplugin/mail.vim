@@ -19,10 +19,9 @@ let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 " FIXME: in theory lines should end in no space whenever the quote depth
 " changes...
 autocmd BufWritePre,FileWritePre *
-    \ %s/\s*$// |
-    \ %s/^--$/-- / |
-    \ 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ / |
-    \ 1/^\s*$/;/^--\s*$/s/^From / From /
+    \ %s/\s*$//e |
+    \ %s/^--$/-- /e |
+    \ 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /e |
 
 " keymaps
 nnoremap <buffer> <silent> <localleader>1 <Esc>:%s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^--\s*/+1<CR>dG:r ~/.signature<CR>
