@@ -18,10 +18,9 @@ let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 " FIXME: in theory lines should end in no space whenever the quote depth
 " changes...
-" also should do space stuffing...
-autocmd BufWritePre,FileWritePre *
+autocmd BufUnload *
     \ %s/\s*$// |
-    \ 1/^
+    \ %s/^--$/-- / |
     \ 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /
     \ 1/^\s*$/;/^--\s*$/s/^From / From /
 
