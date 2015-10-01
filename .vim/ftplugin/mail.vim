@@ -18,10 +18,10 @@ let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 " FIXME: in theory lines should end in no space whenever the quote depth
 " changes...
-autocmd BufUnload *
+autocmd BufWritePre,FileWritePre *
     \ %s/\s*$// |
     \ %s/^--$/-- / |
-    \ 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /
+    \ 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ / |
     \ 1/^\s*$/;/^--\s*$/s/^From / From /
 
 " keymaps
