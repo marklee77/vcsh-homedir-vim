@@ -16,7 +16,10 @@ setlocal textwidth=72
 setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
-" autocmd BufWritePre,FileWritePre * 1/^\s*$/,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//e
+autocmd BufWritePre,FileWritePre *
+    \ %s/\s*$// |
+    \ 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /
+"autocmd BufWritePre,FileWritePre * 1/^\s*$/,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//e
 "autocmd BufWritePre,FileWritePre * 
 "    \ let w:winview = winsaveview() | 
 "    \ 1 | /^\s*$/,/^--\s*$/s/^ \{4}.\{-}\zs\s*$//e | 
