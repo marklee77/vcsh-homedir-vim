@@ -16,7 +16,11 @@ setlocal textwidth=72
 setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
-" FIXME: quote dept decrease seems to kill formatting
+" FIXME: quote depth decrease regex seems to delete arbitrary spaces
+" FIXME: make sure there is at least one space after wokas
+" FIXME: ah, okay, we just match same prefix which must be either no wokas or
+" same number followed by space...then non-space character
+" \(>\+\s\|\)
 function! FixFlowed()
     let pos = getpos('.')
     " compress quote characters
@@ -27,12 +31,17 @@ function! FixFlowed()
     silent! %s/\s*$//
     " put a space back after sig delimiter
     silent! %s/^--$/-- /
+
     " put spaces back at ends of lines in paragraphs
-    silent! 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /
+"   silent! 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n\S\)\@=/ /
+"   silent! 1/^\s*$/;/^--\s*$/s/\(>\+\s\|\).*\S\zs\(\_$\n\1\S\)\@=/ /
+
+
     " strip space at eol if quote depth increases
-    silent! %s/^\(>\+\).*\zs\s\+\ze\_s\1>//
+"   silent! %s/^\(>\+\).*\zs\s\+\ze\_s\1>//
     " strip space at eol if quote depth decreases
-    silent! %s/^\(>\+\).*\zs\s\+\ze\_s\(\1\)\@!//
+"   silent! %s/^\(>\+\).*\zs\s\+\ze\_s\(\1\)\@!//
+
     " space stuff from
     silent! 1/^\s*$/;/^--\s*$/s/^From\ze\_s/ From/
     call setpos('.', pos)
