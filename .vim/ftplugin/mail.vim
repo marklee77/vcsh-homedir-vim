@@ -16,6 +16,7 @@ setlocal textwidth=72
 setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
+" FIXME: quote dept decrease seems to kill formatting
 function! FixFlowed()
     let pos = getpos('.')
     " compress quote characters
@@ -37,7 +38,6 @@ function! FixFlowed()
     call setpos('.', pos)
 endfunction
 
-" FIXME: lines should end in no space whenever the quote depth changes...
 autocmd BufWritePre <buffer> call FixFlowed()
 
 " keymaps
