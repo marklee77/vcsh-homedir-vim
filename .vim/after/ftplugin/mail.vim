@@ -17,3 +17,8 @@ nnoremap <buffer> <silent> <localleader>3 <Esc>:call SetEmail("Mark Stillwell <m
 
 autocmd BufWritePre <buffer> call FixFlowed()
 call FixFlowed()
+
+1/^$/ 
+execute "normal OAttach: "
+1/^Subject:/
+execute "normal A  "
