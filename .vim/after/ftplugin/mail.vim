@@ -20,5 +20,5 @@ call FixFlowed()
 
 1/^$/ 
 execute "normal OAttach: "
-1/^Subject:/
-execute "normal A  "
+1/^To:/
+execute "normal A "
