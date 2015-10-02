@@ -48,9 +48,22 @@ function! FixFlowed()
     call setpos('.', pos)
 endfunction
 
-nnoremap <buffer> <silent> <localleader>1 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^-- /+1<CR>dG:r ~/.signature<CR>
-nnoremap <buffer> <silent> <localleader>2 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <marklee@fortawesome.org><CR>:/^-- /+1<CR>dG:r ~/.signature<CR>
-nnoremap <buffer> <silent> <localleader>3 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <m.stillwell@imperial.ac.uk><CR>:/^-- /+1<CR>dG:r ~/.mutt/accounts/signature.imperial<CR>
+function! SetEmail(address, sigfile)
+    let pos = getpos('.')
+    call FixFlowed()
+    silent! 1;/^$/s/^From:\zs.*/ a:address/
+    silent! /^-- /+1,$d
+    silent! r a:sigfile
+    call setpos('.', pos)
+endfunction
+
+nnoremap <buffer> <silent> <localleader>1 <Esc>:call SetEmail("Mark Stillwell <mark@stillwell.me>", "~/.signature)<CR>
+nnoremap <buffer> <silent> <localleader>2 <Esc>:call SetEmail("Mark Stillwell <marklee@fortawesome.org>", "~/.signature")<CR>
+nnoremap <buffer> <silent> <localleader>3 <Esc>:call SetEmail("Mark Stillwell <m.stillwell@imperial.ac.uk>", "~/.mutt/accounts/signature.imperial")<CR>
+
+"nnoremap <buffer> <silent> <localleader>1 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^-- /+1<CR>dG:r ~/.signature<CR>
+"nnoremap <buffer> <silent> <localleader>2 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <marklee@fortawesome.org><CR>:/^-- /+1<CR>dG:r ~/.signature<CR>
+"nnoremap <buffer> <silent> <localleader>3 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <m.stillwell@imperial.ac.uk><CR>:/^-- /+1<CR>dG:r ~/.mutt/accounts/signature.imperial<CR>
 
 autocmd BufWritePre <buffer> call FixFlowed()
 call FixFlowed()
