@@ -17,7 +17,6 @@ let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 "  - need to re-insert soft-breaks in multi-line list items.
 "  - move into mailtools plugin
 function! FixFlowed()
-    
     let pos = getpos('.')
 
     " compress quote characters
