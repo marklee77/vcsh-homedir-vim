@@ -28,7 +28,8 @@ function! FixFlowed()
     " strip off trailing spaces
     silent! %s/\s*$//
 
-    " put a space back after sig delimiter
+    " put a space back after signature delimiter
+    " FIXME: search from bottom and only do for *last* such line
     silent! %s/^--$/-- /
 
     " put spaces back at ends of lines in paragraph lines, where paragraph lines
