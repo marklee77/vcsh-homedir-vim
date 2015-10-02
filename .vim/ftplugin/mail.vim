@@ -12,12 +12,15 @@ nnoremap <buffer> <silent> <localleader>3 <Esc>:%s/^From:\zs.*/ Mark Stillwell <
 
 set formatexpr=FormatEmailText()
 " FIXME: not sure about w now...
-set fo+=w
+"set fo+=w
 
 setlocal omnifunc=QueryCommandComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
+" FIXME: 
+"  - need to re-insert soft-breaks in multi-line list items.
 function! FixFlowed()
+    
     let pos = getpos('.')
 
     " compress quote characters
