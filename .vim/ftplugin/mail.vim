@@ -29,8 +29,7 @@ function! FixFlowed()
     silent! %s/\s*$//
 
     " put a space back after signature delimiter
-    " FIXME: search from bottom and only do for *last* such line
-    silent! %s/^--$/-- /
+    silent! $?^--$?s/^--$/-- /
 
     " put spaces back at ends of lines in paragraph lines, where paragraph lines
     " are defined as lines followed by lines with the same quote prefix (nothing
