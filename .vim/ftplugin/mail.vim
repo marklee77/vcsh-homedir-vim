@@ -32,8 +32,9 @@ function! FixFlowed()
     silent! %s/^--$/-- /
 
     " put spaces back at ends of lines in paragraphs
-    silent! 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n[^[:space:]>]\)\@=/ /
-    silent! 1/^\s*$/;/^--\s*$/s/\(>\+\s\).*\S\zs\(\_$\n\1\S\)\@=/ /
+    "silent! 1/^\s*$/;/^--\s*$/s/\S\zs\(\_$\n[^[:space:]>]\)\@=/ /
+    "ilent! 1/^\s*$/;/^--\s*$/s/\(>\+\s\).*\S\zs\(\_$\n\1\S\)\@=/ /
+    silent! 1/^\s*$/;/^--\s*$/s/\(>\+\s\|\).*\S\zs\(\_$\n\1[(\[{*]\=[0-9A-Za-z]\)\@=/ /
 
     " space stuff from
     silent! 1/^\s*$/;/^--\s*$/s/^From\ze\_s/ From/
