@@ -29,17 +29,17 @@ function! FixFlowed()
     silent! %s/\s*$//
 
     " put a space back after signature delimiter
-    silent! $?^--$?s/^--$/-- /
+    silent! $?^--$?s/$/ /
 
     " put spaces back at ends of lines in paragraph lines, where paragraph lines
     " are defined as lines followed by lines with the same quote prefix (nothing
     " or some number of > followed by a space) that starts with an optional
     " opening punctuation mark, one of "*([{@~|>, that is immediately followed
     " by a letter or digit.
-    silent! 1/^\s*$/;/^--\s*$/s/\(>\+\s\|\).*\S\zs\(\_$\n\1["*(\[{@~|<]\=[0-9A-Za-z]\)\@=/ /
+    silent! 1/^$/;/^-- $/s/\(>\+\s\|\).*\S\zs\(\_$\n\1["*(\[{@~|<]\=[0-9A-Za-z]\)\@=/ /
 
     " space stuff from
-    silent! 1/^\s*$/;/^--\s*$/s/^From\ze\_s/ From/
+    silent! 1/^$/;/^-- $/s/^From\ze\_s/ From/
 
     call setpos('.', pos)
 endfunction
