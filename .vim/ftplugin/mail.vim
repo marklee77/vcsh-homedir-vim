@@ -51,13 +51,13 @@ endfunction
 function! SetEmail(address, sigfile)
     let pos = getpos('.')
     call FixFlowed()
-    silent! 1;/^$/s/^From:\zs.*/ a:address/
+    execute '1;/^$/s/^From:\zs.*/ ' . a:address . '/'
     silent! /^-- /+1,$d
-    silent! r a:sigfile
+    execute 'r ' . a:sigfile
     call setpos('.', pos)
 endfunction
 
-nnoremap <buffer> <silent> <localleader>1 <Esc>:call SetEmail("Mark Stillwell <mark@stillwell.me>", "~/.signature)<CR>
+nnoremap <buffer> <silent> <localleader>1 <Esc>:call SetEmail("Mark Stillwell <mark@stillwell.me>", "~/.signature")<CR>
 nnoremap <buffer> <silent> <localleader>2 <Esc>:call SetEmail("Mark Stillwell <marklee@fortawesome.org>", "~/.signature")<CR>
 nnoremap <buffer> <silent> <localleader>3 <Esc>:call SetEmail("Mark Stillwell <m.stillwell@imperial.ac.uk>", "~/.mutt/accounts/signature.imperial")<CR>
 
