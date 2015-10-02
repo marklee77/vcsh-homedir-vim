@@ -16,8 +16,8 @@ nnoremap <buffer> <silent> <localleader>2 <Esc>:call SetEmail("Mark Stillwell <m
 nnoremap <buffer> <silent> <localleader>3 <Esc>:call SetEmail("Mark Stillwell <m.stillwell@imperial.ac.uk>", "~/.mutt/accounts/signature.imperial")<CR>
 
 autocmd BufWritePre <buffer> call FixFlowed()
-call FixFlowed()
 
+call FixFlowed()
 1/^$/ 
 execute "normal OAttach: "
 1/^To:/
