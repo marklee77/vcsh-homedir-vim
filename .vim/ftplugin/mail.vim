@@ -1,10 +1,6 @@
 set formatexpr=FormatEmailText()
 set fo+=w
 
-" markdown syntax highlighting
-"set filetype=pandoc
-"syntax on
-
 nnoremap <buffer> <silent> Q /^\(\s*>\)\@!<CR>
 onoremap <buffer> <silent> Q V/^.*\n\(\s*>\)\@!<CR>
 nnoremap <buffer> <silent> S /^.*\n--\s*\_$<CR>
