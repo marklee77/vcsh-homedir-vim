@@ -9,7 +9,21 @@ onoremap <buffer> <silent> S V/^.*\n.*\n-- \_$<CR>
 set formatexpr=FormatEmailText()
 
 setlocal omnifunc=QueryCommandComplete
-let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
+
+function! EmailContext()
+    return "\<c-x>\<c-o>"
+    let l = line('.')
+    while l > 1 && getline(l) !~ ':' && getline(l - 1) !~ '^\s*$'
+        let l -= 1
+    endwhile
+    if getline(l) =~ /^Attach:/
+        return "\<c-x>\<c-f>"
+    endif
+endfunction
+
+let g:SuperTabCompletionContexts = ['EmailContext']
+
+" let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 nnoremap <buffer> <silent> <localleader>1 <Esc>:call SetEmail("Mark Stillwell <mark@stillwell.me>", "~/.signature")<CR>
 nnoremap <buffer> <silent> <localleader>2 <Esc>:call SetEmail("Mark Stillwell <marklee@fortawesome.org>", "~/.signature")<CR>
