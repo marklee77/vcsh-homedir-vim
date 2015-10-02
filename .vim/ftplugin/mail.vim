@@ -6,10 +6,6 @@ onoremap <buffer> <silent> Q V/^.*\n\(>\)\@!<CR>
 nnoremap <buffer> <silent> S /^.*\n-- \_$<CR>
 onoremap <buffer> <silent> S V/^.*\n.*\n-- \_$<CR>
 
-nnoremap <buffer> <silent> <localleader>1 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^-- /+1<CR>dG:r ~/.signature<CR>
-nnoremap <buffer> <silent> <localleader>2 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <marklee@fortawesome.org><CR>:/^-- /+1<CR>dG:r ~/.signature<CR>
-nnoremap <buffer> <silent> <localleader>3 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <m.stillwell@imperial.ac.uk><CR>:/^-- /+1<CR>dG:r ~/.mutt/accounts/signature.imperial<CR>
-
 set formatexpr=FormatEmailText()
 " FIXME: not sure about w now...
 "set formatoptions+=w
@@ -51,6 +47,10 @@ function! FixFlowed()
 
     call setpos('.', pos)
 endfunction
+
+nnoremap <buffer> <silent> <localleader>1 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <mark@stillwell.me><CR>:/^-- /+1<CR>dG:r ~/.signature<CR>
+nnoremap <buffer> <silent> <localleader>2 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <marklee@fortawesome.org><CR>:/^-- /+1<CR>dG:r ~/.signature<CR>
+nnoremap <buffer> <silent> <localleader>3 <Esc>:1;/^$/s/^From:\zs.*/ Mark Stillwell <m.stillwell@imperial.ac.uk><CR>:/^-- /+1<CR>dG:r ~/.mutt/accounts/signature.imperial<CR>
 
 autocmd BufWritePre <buffer> call FixFlowed()
 call FixFlowed()
