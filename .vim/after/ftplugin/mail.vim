@@ -36,4 +36,3 @@ call FixFlowed()
 1/^$/ 
 execute "normal OAttach: "
 1/^To:/
-execute "normal A "
