@@ -11,16 +11,17 @@ set formatexpr=FormatEmailText()
 setlocal omnifunc=QueryCommandComplete
 
 function! EmailContext()
-    return "\<c-x>\<c-o>"
     let l = line('.')
     while l > 1 && getline(l) !~ ':' && getline(l - 1) !~ '^\s*$'
         let l -= 1
     endwhile
-    if getline(l) =~ /^Attach:/
+    if getline(l) =~ '^Attach:'
         return "\<c-x>\<c-f>"
     endif
+    return "\<c-x>\<c-o>"
 endfunction
 
+let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabCompletionContexts = ['EmailContext']
 
 " let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
