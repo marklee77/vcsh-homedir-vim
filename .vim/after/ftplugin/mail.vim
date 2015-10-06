@@ -1,5 +1,5 @@
 setlocal spell spelllang=en_us 
-setlocal textwidth=72
+setlocal textwidth=78
 
 nnoremap <buffer> <silent> Q /^\(>\)\@!<CR>
 onoremap <buffer> <silent> Q V/^.*\n\(>\)\@!<CR>
