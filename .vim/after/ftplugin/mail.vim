@@ -9,6 +9,7 @@ onoremap <buffer> <silent> S V/^.*\n.*\n-- \_$<CR>
 set formatexpr=FormatEmailText()
 
 setlocal omnifunc=QueryCommandComplete
+" let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 function! EmailContext()
     let l = line('.')
@@ -24,15 +25,13 @@ endfunction
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabCompletionContexts = ['EmailContext']
 
-" let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
-
 nnoremap <buffer> <silent> <localleader>1 <Esc>:call SetEmail("Mark Stillwell <mark@stillwell.me>", "~/.signature")<CR>
 nnoremap <buffer> <silent> <localleader>2 <Esc>:call SetEmail("Mark Stillwell <marklee@fortawesome.org>", "~/.signature")<CR>
 nnoremap <buffer> <silent> <localleader>3 <Esc>:call SetEmail("Mark Stillwell <m.stillwell@imperial.ac.uk>", "~/.mutt/accounts/signature.imperial")<CR>
 
-autocmd BufWritePre <buffer> call FixFlowed()
-
+autocmd BufWrite <buffer> call FixFlowed()
 call FixFlowed()
-1/^$/ 
+
+1/^$/
 execute "normal OAttach: "
 1/^To:/
