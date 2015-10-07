@@ -10,19 +10,9 @@ onoremap <buffer> <silent> S V/^.*\n.*\n-- \_$<CR>
 set formatexpr=FormatEmailText()
 
 setlocal omnifunc=QueryCommandComplete
-" let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
-" FIXME: export extractheader...
-"function! EmailContext()
-"    let l = line('.')
-"    while l > 1 && getline(l) !~ ':' && getline(l - 1) !~ '^\s*$'
-"        let l -= 1
-"    endwhile
-"    if getline(l) =~ '^Attach:'
-"        return "\<c-x>\<c-f>"
-"    endif
-"    return "\<c-x>\<c-o>"
-"endfunction
+" let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
+let g:SuperTabDefaultCompletionType = 'context'
 
 function! EmailContext()
     let fieldname = GetFieldName()
@@ -34,7 +24,6 @@ function! EmailContext()
     endif
 endfunction
 
-let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabCompletionContexts = ['EmailContext']
 
 nnoremap <buffer> <silent> <localleader>1 <Esc>:call SetEmail("Mark Stillwell <mark@stillwell.me>", "~/.signature")<CR>
