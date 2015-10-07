@@ -22,6 +22,7 @@ function! EmailContext()
         endif
         return "\<c-x>\<c-o>"
     endif
+    return "\<c-x>\<c-k>"
 endfunction
 
 let g:SuperTabCompletionContexts = ['EmailContext']
