@@ -1,6 +1,7 @@
 setlocal spell spelllang=en_us 
 setlocal textwidth=78
 
+" FIXME: key combo to add attachment
 nnoremap <buffer> <silent> Q /^\(>\)\@!<CR>
 onoremap <buffer> <silent> Q V/^.*\n\(>\)\@!<CR>
 nnoremap <buffer> <silent> S /^.*\n-- \_$<CR>
@@ -11,6 +12,7 @@ set formatexpr=FormatEmailText()
 setlocal omnifunc=QueryCommandComplete
 " let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
+" FIXME: export extractheader...
 function! EmailContext()
     let l = line('.')
     while l > 1 && getline(l) !~ ':' && getline(l - 1) !~ '^\s*$'
@@ -31,7 +33,3 @@ nnoremap <buffer> <silent> <localleader>3 <Esc>:call SetEmail("Mark Stillwell <m
 
 autocmd BufWrite <buffer> call FixFlowed()
 call FixFlowed()
-
-1/^$/
-execute "normal OAttach: "
-1/^To:/
