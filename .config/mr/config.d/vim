@@ -13,6 +13,10 @@ checkout = git clone https://gitlab.stillwell.me/mark/mailtools-vim.git mailtool
            git remote set-url --add --push origin git@bitbucket.org:marklee77/mailtools.vim.git
 skip     = [ "$1" = commit ]
 
+[${HOME}/.vim/bundle/vim-bracketed-paste]
+checkout = git clone git@github.com:ConradIrwin/vim-bracketed-paste.git
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
 [${HOME}/.vim/bundle/gist-vim]
 checkout = git clone https://github.com/mattn/gist-vim.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
