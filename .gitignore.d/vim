@@ -12,6 +12,8 @@
 !.vim/*
 .vim/.netrwhist
 .vim/**/*.pyc
+!.vim/after
+!.vim/after/*
 !.vim/ftplugin
 !.vim/ftplugin/*
 !.vimrc
