@@ -14,7 +14,7 @@ checkout = git clone https://gitlab.stillwell.me/mark/mailtools-vim.git mailtool
 skip     = [ "$1" = commit ]
 
 [${HOME}/.vim/bundle/vim-bracketed-paste]
-checkout = git clone git@github.com:ConradIrwin/vim-bracketed-paste.git
+checkout = git clone https://github.com/ConradIrwin/vim-bracketed-paste.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/gist-vim]
@@ -50,7 +50,11 @@ checkout = git clone https://github.com/freitass/todo.txt-vim.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-airline]
-checkout = git clone https://github.com/bling/vim-airline.git 
+checkout = git clone https://github.com/vim-airline/vim-airline.git 
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
+[${HOME}/.vim/bundle/vim-airline-themes]
+checkout = git clone https://github.com/vim-airline/vim-airline-themes.git 
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-colors-solarized]
