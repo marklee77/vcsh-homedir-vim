@@ -4,6 +4,7 @@ checkout = git clone https://gitlab.stillwell.me/mark/querycommandcomplete-vim.g
            git remote set-url --add --push origin git@stillwell.me:mark/querycommandcomplete-vim.git
            git remote set-url --add --push origin git@github.com:marklee77/querycommandcomplete.vim.git
            git remote set-url --add --push origin git@bitbucket.org:marklee77/querycommandcomplete.vim.git
+skip     = [ "$1" = commit ]
 
 [${HOME}/.vim/bundle/mailtools.vim]
 checkout = git clone https://gitlab.stillwell.me/mark/mailtools-vim.git mailtools.vim
@@ -120,4 +121,3 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 [${HOME}/.vim/bundle/webapi-vim]
 checkout = git clone https://github.com/mattn/webapi-vim.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
-
