@@ -32,9 +32,6 @@ nnoremap <buffer> <silent> <localleader>1 <Esc>:call SetEmail("Mark Stillwell <m
 nnoremap <buffer> <silent> <localleader>2 <Esc>:call SetEmail("Mark Stillwell <marklee@fortawesome.org>", "~/.signature")<CR>
 nnoremap <buffer> <silent> <localleader>3 <Esc>:call SetEmail("Mark Stillwell <m.stillwell@imperial.ac.uk>", "~/.mutt/accounts/signature.imperial")<CR>
 
-augroup mail
-  autocmd!
-  autocmd BufWrite <buffer> call FixFlowed()
-augroup END
+nnoremap <buffer> <silent> ZZ <Esc>:call FixFlowed()<CR><Esc>ZZ
 
 call FixFlowed()
