@@ -161,6 +161,11 @@ syntax on
 " highlight chars over textwidth
 "if &textwidth > 0 | exec 'match Todo /\%>' . &textwidth . 'v.\+/' | endif
 
+" highlight unwanted spaces
+highlight ExtraWhiteSpace ctermbg=orange guibg=orange
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
 " check for autocmd
 if has("autocmd")
   augroup makefile
