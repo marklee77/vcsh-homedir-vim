@@ -1,6 +1,7 @@
+highlight clear ExtraWhitespace
 set formatexpr=FormatEmailText()
 
-setlocal spell spelllang=en_us 
+setlocal spell spelllang=en_us
 setlocal textwidth=78
 
 setlocal omnifunc=QueryCommandComplete
