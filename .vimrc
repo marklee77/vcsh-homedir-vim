@@ -68,6 +68,13 @@ nnoremap <leader>gd :SignifyDebug<CR>
 " ************************************************************
 let g:netrw_silent=1
 
+" ************************************************************
+" * vim-pandoc                                               *
+" ************************************************************
+if v:version < 704
+  let g:pandoc#modules#disabled = [ 'bibliographies', 'command' ]
+endif
+
 " hunk jumping
 "nmap <leader>gj <plug>(signify-next-hunk)
 "nmap <leader>gk <plug>(signify-prev-hunk)
