@@ -1,3 +1,6 @@
+" use vim settings instead of vi settings
+set nocompatible
+
 " ************************************************************
 " * pathogen plugin manager                                  *
 " ************************************************************
@@ -96,9 +99,6 @@ autocmd ColorScheme * highlight SpellLocal ctermfg=green
 " ************************************************************
 " * standard vim settings and overrides                      *
 " ************************************************************
-
-" use vim settings instead of vi settings
-set nocompatible
 
 " utf-8
 set encoding=utf-8
