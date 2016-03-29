@@ -169,15 +169,10 @@ syntax on
 "if &textwidth > 0 | exec 'match Todo /\%>' . &textwidth . 'v.\+/' | endif
 
 " highlight unwanted spaces
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\m \+\ze\t/     " spaces before tabs
-match ExtraWhitespace /\m^\t\+\zs \+/  " spaces after tabs
-match ExtraWhitespace /\m[^\t]\zs\t\+/ " tabs not at start of line
-match ExtraWhitespace /\m\s\+$/
-
-" spaces at end of line
-autocmd InsertEnter * match ExtraWhitespace /\m\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\m\s\+$/
+match ExtraWhitespace /\m\s\+\%#\@<!$\| \+\ze\t\|^\t\+\zs \+\|[^\t]\zs\t\+/
+autocmd InsertLeave * redraw!
 
 " check for autocmd
 if has("autocmd")
