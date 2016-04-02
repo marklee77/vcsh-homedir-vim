@@ -25,7 +25,7 @@ checkout = git clone https://github.com/ConradIrwin/vim-bracketed-paste.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/gist-vim]
-checkout = git clone https://github.com/mattn/gist-vim.git 
+checkout = git clone https://github.com/mattn/gist-vim.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/gundo.vim]
@@ -33,11 +33,11 @@ checkout = git clone https://github.com/sjl/gundo.vim.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/nerdcommenter]
-checkout = git clone https://github.com/scrooloose/nerdcommenter.git 
+checkout = git clone https://github.com/scrooloose/nerdcommenter.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/supertab]
-checkout = git clone https://github.com/ervandew/supertab.git 
+checkout = git clone https://github.com/ervandew/supertab.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/syntastic]
@@ -53,15 +53,15 @@ checkout = git clone https://github.com/edkolev/tmuxline.vim.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/todo.txt-vim]
-checkout = git clone https://github.com/freitass/todo.txt-vim.git 
+checkout = git clone https://github.com/freitass/todo.txt-vim.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-airline]
-checkout = git clone https://github.com/vim-airline/vim-airline.git 
+checkout = git clone https://github.com/vim-airline/vim-airline.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-airline-themes]
-checkout = git clone https://github.com/vim-airline/vim-airline-themes.git 
+checkout = git clone https://github.com/vim-airline/vim-airline-themes.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-colors-solarized]
@@ -69,7 +69,7 @@ checkout = git clone https://github.com/altercation/vim-colors-solarized.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-dispatch]
-checkout = git clone https://github.com/tpope/vim-dispatch.git 
+checkout = git clone https://github.com/tpope/vim-dispatch.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-eunuch]
@@ -77,15 +77,19 @@ checkout = git clone https://github.com/tpope/vim-eunuch.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-fugitive]
-checkout = git clone https://github.com/tpope/vim-fugitive.git 
+checkout = git clone https://github.com/tpope/vim-fugitive.git
+skip     = [ "$1" = push ] || [ "$1" = autopush ]
+
+[${HOME}/.vim/bundle/vim-git]
+checkout = git clone https://github.com/tpope/vim-git.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-gnupg]
-checkout = git clone https://github.com/jamessan/vim-gnupg.git 
+checkout = git clone https://github.com/jamessan/vim-gnupg.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-ipython]
-checkout = git clone https://github.com/ivanov/vim-ipython.git 
+checkout = git clone https://github.com/ivanov/vim-ipython.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 #[${HOME}/.vim/bundle/vim-latex]
@@ -93,7 +97,7 @@ skip     = [ "$1" = push ] || [ "$1" = autopush ]
 #skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-orgmode]
-checkout = git clone https://github.com/jceb/vim-orgmode.git 
+checkout = git clone https://github.com/jceb/vim-orgmode.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-pandoc]
@@ -109,7 +113,7 @@ checkout = git clone https://github.com/vim-pandoc/vim-pandoc-syntax.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-pathogen]
-checkout = git clone https://github.com/tpope/vim-pathogen.git 
+checkout = git clone https://github.com/tpope/vim-pathogen.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-signify]
@@ -117,7 +121,7 @@ checkout = git clone https://github.com/mhinz/vim-signify.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-speeddating]
-checkout = git clone https://github.com/tpope/vim-speeddating.git 
+checkout = git clone https://github.com/tpope/vim-speeddating.git
 skip     = [ "$1" = push ] || [ "$1" = autopush ]
 
 [${HOME}/.vim/bundle/vim-unimpaired]
