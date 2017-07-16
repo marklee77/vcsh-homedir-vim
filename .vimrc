@@ -18,7 +18,7 @@ let g:gist_open_browser_after_post = 1
 " * gundo.vim                                                *
 " ************************************************************
 let g:gundo_right = 1
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <leader>u :GundoToggle<CR>
 
 " ************************************************************
 " * query command complete                                   *
@@ -74,17 +74,6 @@ let g:netrw_silent=1
 if v:version < 704
   let g:pandoc#modules#disabled = [ 'bibliographies', 'command' ]
 endif
-
-" hunk jumping
-"nmap <leader>gj <plug>(signify-next-hunk)
-"nmap <leader>gk <plug>(signify-prev-hunk)
-
-" hunk text object
-
-"omap ic <plug>(signify-motion-inner-pending)
-"xmap ic <plug>(signify-motion-inner-visual)
-"omap ac <plug>(signify-motion-outer-pending)
-"xmap ac <plug>(signify-motion-outer-visual)
 
 " ************************************************************
 " * vim-solarized                                            *
@@ -166,7 +155,7 @@ filetype plugin on
 syntax on
 
 " highlight chars over textwidth
-"if &textwidth > 0 | exec 'match Todo /\%>' . &textwidth . 'v.\+/' | endif
+if &textwidth > 0 | exec 'match Todo /\%>' . &textwidth . 'v.\+/' | endif
 
 " highlight unwanted spaces
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
