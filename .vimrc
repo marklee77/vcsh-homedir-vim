@@ -59,10 +59,21 @@ let g:signify_cursorhold_normal = 1
 let g:signify_update_on_bufenter = 1
 let g:signify_update_on_focusgained = 1
 let g:signify_disable_by_default = 0
-nnoremap <leader>gt :SignifyToggle<CR>
-nnoremap <leader>gh :SignifyToggleHighlight<CR>
-nnoremap <leader>gr :SignifyRefresh<CR>
-nnoremap <leader>gd :SignifyDebug<CR>
+nnoremap <leader>st :SignifyToggle<CR>
+nnoremap <leader>sh :SignifyToggleHighlight<CR>
+nnoremap <leader>sr :SignifyRefresh<CR>
+nnoremap <leader>sd :SignifyDebug<CR>
+
+" ************************************************************
+" * vim-fugitive                                             *
+" ************************************************************
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gd :Gvdiff<CR>
+nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gw :Gwrite<CR>
+
 " ************************************************************
 " * netrw                                                    *
 " ************************************************************
