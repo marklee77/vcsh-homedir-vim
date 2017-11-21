@@ -18,6 +18,7 @@ let g:gist_open_browser_after_post = 1
 " * gundo.vim                                                *
 " ************************************************************
 let g:gundo_right = 1
+let g:gundo_prefer_python3 = 1
 nnoremap <leader>u :GundoToggle<CR>
 
 " ************************************************************
