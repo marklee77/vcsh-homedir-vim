@@ -209,4 +209,4 @@ endif " has("autocmd")
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " clipboard
-set clipboard=unnamedplus
+set clipboard^=unnamedplus
